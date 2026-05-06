@@ -185,7 +185,7 @@ Add to the `manifest/projects` section:
 projects:
   - name: zmk
     remote: zmkfirmware
-    revision: main
+    revision: v0.3
     import: app/west.yml
   - name: zmk-keyboard-cornix
     remote: cornix-shield
@@ -303,7 +303,7 @@ remotes:
 projects:
   - name: zmk
     remote: zmkfirmware
-    revision: main
+    revision: v0.3
     import: app/west.yml
   - name: zmk-keyboard-cornix
     remote: cornix-shield
