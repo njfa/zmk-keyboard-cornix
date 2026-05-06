@@ -180,7 +180,7 @@ remotes:
 projects:
   - name: zmk
     remote: zmkfirmware
-    revision: v0.3
+    revision: main
     import: app/west.yml
   - name: zmk-keyboard-cornix
     remote: cornix-shield
@@ -208,7 +208,7 @@ west update
 ```yaml
 include:
   # 使用带适配器的 cornix
-  - board: nice_nano
+  - board: nice_nano@1//zmk
     shield: cornix_dongle_adaptor cornix_dongle_eyelash dongle_display
     snippet: studio-rpc-usb-uart
     artifact-name: cornix_dongle
@@ -259,7 +259,7 @@ include:
 ```yaml
 include:
   # 使用带适配器的 cornix
-  - board: nice_nano
+  - board: nice_nano@1//zmk
     shield: cornix_dongle_adapter cornix_dongle_eyelash dongle_display
     snippet: studio-rpc-usb-uart
     artifact-name: cornix_dongle
@@ -274,7 +274,7 @@ include:
 对于自定义适配器屏幕，在 build.yaml 中为您的自定义适配器添加新目标：
 
 ```yaml
-- board: nice_nano
+- board: nice_nano@1//zmk
   shield: cornix_dongle_adapter cornix_dongle_eyelash dongle_display
   snippet: studio-rpc-usb-uart zmk-usb-logging
   artifact-name: cornix_dongle
@@ -302,7 +302,7 @@ remotes:
 projects:
   - name: zmk
     remote: zmkfirmware
-    revision: v0.3
+    revision: main
     import: app/west.yml
   - name: zmk-keyboard-cornix
     remote: cornix-shield

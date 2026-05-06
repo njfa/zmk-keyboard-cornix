@@ -185,7 +185,7 @@ Add to the `manifest/projects` section:
 projects:
   - name: zmk
     remote: zmkfirmware
-    revision: v0.3
+    revision: main
     import: app/west.yml
   - name: zmk-keyboard-cornix
     remote: cornix-shield
@@ -213,7 +213,7 @@ Edit the `build.yaml` file, add:
 ```yaml
 include:
   # Use cornix with dongle
-  - board: nice_nano
+  - board: nice_nano@1//zmk
     shield: cornix_dongle_adaptor cornix_dongle_eyelash dongle_display
     snippet: studio-rpc-usb-uart
     artifact-name: cornix_dongle
@@ -263,7 +263,7 @@ The configuration in the `build.yaml` file shows how to use these shields for th
 ```yaml
 include:
   # Use cornix with dongle
-  - board: nice_nano
+  - board: nice_nano@1//zmk
     shield: cornix_dongle_adapter cornix_dongle_eyelash dongle_display
     snippet: studio-rpc-usb-uart
     artifact-name: cornix_dongle
@@ -277,7 +277,7 @@ To create a custom shield for the display part:
 
 For custom dongle screens, add a new target in build.yaml for your custom dongle:
 ```yaml
-- board: nice_nano
+- board: nice_nano@1//zmk
   shield: cornix_dongle_adapter cornix_dongle_eyelash dongle_display
   snippet: studio-rpc-usb-uart zmk-usb-logging
   artifact-name: cornix_dongle
@@ -303,7 +303,7 @@ remotes:
 projects:
   - name: zmk
     remote: zmkfirmware
-    revision: v0.3
+    revision: main
     import: app/west.yml
   - name: zmk-keyboard-cornix
     remote: cornix-shield
