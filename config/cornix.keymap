@@ -12,12 +12,12 @@
 
 // tap windows for ctl alt and gui
 
-#define HM_TAPPING_TERM 250
+#define HM_TAPPING_TERM 180
 #define HM_TAPPING_REPEAT 210
 
 // quick tapping for shift
 
-#define HM_TAPPING_TERM_FAST 200
+#define HM_TAPPING_TERM_FAST 170
 #define HM_PRIOR_IDLE 70
 #define BASE 0
 #define WIN 1
@@ -195,7 +195,7 @@
             bindings = <&mo>, <&kp>;
 
             flavor = "hold-preferred";
-            tapping-term-ms = <HM_TAPPING_TERM>;
+            tapping-term-ms = <0>;
             quick-tap-ms = <0>;
         };
     };
@@ -256,7 +256,7 @@
 
             bindings = <
 &none     &kp Q               &kp W      &kp E      &kp R      &kp T                       &kp Y      &kp U       &kp I      &kp O            &kp P             &none
-&kp LALT  &hm_l0 LCTRL A      &kp S      &kp D      &kp F      &kp G                       &kp H      &kp J       &kp K      &kp L            &hm_r0 LCTRL TAB  &kp RGUI
+&kp RGUI  &hm_l0 LCTRL A      &kp S      &kp D      &kp F      &kp G                       &kp H      &kp J       &kp K      &kp L            &hm_r0 LCTRL TAB  &kp LALT
 &none     &hm_shift_l0 LSHFT Z  &kp X    &kp C      &kp V      &kp B        &kp C_MUTE  &none      &kp N       &kp M      &kp COMMA        &kp DOT           &hm_shift_r0 RSHFT FSLH  &none
 &none     &none               &none      &hm_l LCTRL LANG1  &lt0 1 SPACE  &lt 5 ESCAPE                &kp BACKSPACE  &lt0 2 ENTER  &lt 4 LANG2  &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2
             >;
@@ -277,7 +277,7 @@
 &none   &kp EXCL               &kp LBKT   &kp HASH   &kp DLLR    &kp PRCNT                 &kp PIPE   &kp AMPS   &kp DQT    &kp LBRC   &kp PLUS   &none
 &trans  &kp N1                 &kp N2     &kp N3     &kp N4      &kp N5                    &kp KP_PLUS  &kp UNDER  &kp MINUS  &kp EQUAL  &trans     &trans
 &none   &hm_shift_l LSHFT N6   &kp N7     &kp N8     &kp N9      &kp N0      &kp C_MUTE  &none      &kp BSLH   &kp PIPE   &trans     &trans     &trans     &none
-&none   &none                  &none      &trans     &trans      &trans                    &trans      &trans     &kp DEL    &none      &none      &none
+&none   &none                  &none      &trans     &trans      &trans                  &kp DEL      &trans      &trans     &none      &none      &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
