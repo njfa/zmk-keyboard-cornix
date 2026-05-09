@@ -162,7 +162,7 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "hold-preferred";
-            tapping-term-ms = <210>;
+            tapping-term-ms = <220>;
             quick-tap-ms = <0>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
             hold-trigger-key-positions = <KEYS_R KEYS_T>;
