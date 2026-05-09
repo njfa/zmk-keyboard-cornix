@@ -333,10 +333,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&none   &kp EXCL               &kp LBKT   &kp HASH   &kp DLLR    &kp PRCNT                 &kp PIPE   &kp AMPS   &kp DQT    &kp LBRC   &kp PLUS   &none
-&trans  &kp N1                 &kp N2     &kp N3     &kp N4      &kp N5                    &kp KP_PLUS  &kp UNDER  &kp MINUS  &kp EQUAL  &trans     &trans
-&none   &hm_shift_l LSHFT N6   &kp N7     &kp N8     &kp N9      &kp N0      &kp C_MUTE  &none      &kp BSLH   &kp PIPE   &trans     &trans     &trans     &none
-&none   &none                  &none      &trans     &trans      &trans                  &kp DEL      &trans      &trans     &none      &none      &none
+&none   &kp LS(N1)             &kp LBKT   &kp LS(N3)   &kp LS(N4)   &kp LS(N5)               &kp LS(INT3)  &kp LS(N6)    &kp LS(SQT)   &kp LS(LBKT)   &kp LS(EQUAL)  &none
+&trans  &kp N1                 &kp N2     &kp N3       &kp N4       &kp N5                   &kp LS(SEMI)  &kp LS(INT1)  &kp MINUS     &kp LS(MINUS)  &trans        &trans
+&none   &hm_shift_l LSHFT N6   &kp N7     &kp N8       &kp N9       &kp N0      &kp C_MUTE  &none       &kp INT1      &kp LS(INT3)  &trans       &trans        &trans        &none
+&none   &none                  &none      &trans       &trans       &trans                    &kp DEL       &trans        &trans        &none         &none         &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -344,7 +344,7 @@
         Symbol_layer {
             display-name = "Symbols/Nav";
 
-            // TODO: Some binds are waiting for shifted keycode support.
+            // Japanese-layout host symbol equivalents based on QMK JP_* keycodes.
             // -------------------------------
             // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
@@ -353,10 +353,10 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&none   &kp EXCL                &kp LBKT    &kp HASH    &kp DLLR    &kp PRCNT                 &kp PIPE    &kp AMPS   &kp DQT   &kp LBRC   &kp PLUS  &none
-&trans  &kp SQT                 &kp RBRC    &kp RBKT    &kp ASTRK   &kp AT                    &kp LEFT    &kp DOWN   &kp UP    &kp RIGHT  &trans    &trans
-&none   &hm_shift_l LSHFT SEMI  &kp QUESTION  &kp BSLH  &kp AMPS    &kp LPAR    &kp C_MUTE  &none      &kp HOME    &kp END    &kp COMMA  &kp DOT    &trans    &none
-&none   &none                   &none       &trans      &lt0 1 SPACE  &trans                    &trans      &trans     &trans    &none       &none     &none
+&none   &kp LS(N1)              &kp LBKT     &kp LS(N3)    &kp LS(N4)   &kp LS(N5)                &kp LS(INT3)  &kp LS(N6)  &kp LS(SQT)     &kp LS(LBKT)  &kp LS(EQUAL) &none
+&trans  &kp SQT                 &kp LS(RBKT) &kp RBKT      &kp LS(N8)   &kp LS(N2)                &kp LEFT      &kp DOWN    &kp UP          &kp RIGHT     &trans        &trans
+&none   &hm_shift_l LSHFT SEMI  &kp LS(NUHS) &kp NUHS      &kp LS(N7)   &kp LS(N9)   &kp C_MUTE  &none       &kp HOME    &kp END         &kp LS(COMMA)  &kp LS(DOT)   &trans        &none
+&none   &none                   &none        &trans        &lt0 1 SPACE &trans                     &trans        &trans      &trans          &none         &none         &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
@@ -372,10 +372,10 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3   &kp F4  &kp F5                         &kp F6    &kp F7     &kp F8     &kp F9    &kp F10  &kp F11
-&trans  &kp N1  &kp N2  &kp N3   &kp N4  &kp N5                         &kp BSPC  &kp MINUS  &kp EQUAL  &kp PLUS  &kp DQT  &kp F12
-&trans  &kp N6  &kp N7  &kp N8   &kp N9  &kp N0         &trans  &trans  &kp TAB   &kp INS    &kp HOME   &kp END   &trans   &trans
-&trans   &none   &none   &trans   &trans  &trans                         &trans    &kp RALT   &trans     &none     &none    &trans
+&trans  &kp F1  &kp F2  &kp F3   &kp F4  &kp F5                         &kp F6    &kp F7        &kp F8        &kp F9        &kp F10     &kp F11
+&trans  &kp N1  &kp N2  &kp N3   &kp N4  &kp N5                         &kp BSPC  &kp MINUS     &kp LS(MINUS) &kp LS(SEMI)  &kp LS(N2)  &kp F12
+&trans  &kp N6  &kp N7  &kp N8   &kp N9  &kp N0         &trans  &trans  &kp TAB   &kp INS       &kp HOME      &kp END       &trans      &trans
+&trans   &none   &none   &trans   &trans  &trans                         &trans    &kp RALT      &trans        &none         &none       &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
