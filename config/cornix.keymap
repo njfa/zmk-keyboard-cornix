@@ -334,8 +334,8 @@
 
             bindings = <
 &none   &kp LS(N1)             &kp LBKT   &kp LS(N3)   &kp LS(N4)   &kp LS(N5)               &kp LS(INT3)  &kp LS(N6)    &kp LS(SQT)   &kp LS(LBKT)   &kp LS(EQUAL)  &none
-&trans  &kp N1                 &kp N2     &kp N3       &kp N4       &kp N5                   &kp LS(SEMI)  &kp LS(INT1)  &kp MINUS     &kp LS(MINUS)  &trans        &trans
-&none   &hm_shift_l LSHFT N6   &kp N7     &kp N8       &kp N9       &kp N0      &kp C_MUTE  &none       &kp INT1      &kp LS(INT3)  &trans       &trans        &trans        &none
+&trans  &kp N1                 &kp N2     &kp N3       &kp N4       &kp N5                   &kp LS(SEMI)  &kp LS(MINUS) &kp MINUS     &kp EQUAL      &trans        &trans
+&none   &hm_shift_l LSHFT N6   &kp N7     &kp N8       &kp N9       &kp N0      &kp C_MUTE  &none       &kp INT1      &kp LS(INT1)  &trans       &trans        &trans        &none
 &none   &none                  &none      &trans       &trans       &trans                    &kp DEL       &trans        &trans        &none         &none         &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
